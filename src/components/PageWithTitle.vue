@@ -8,7 +8,8 @@
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">{{ title }}</ion-title>
+          <!-- iOS 下标题显示不完整  怀疑 UI 组件库 Bug -->
+          <ion-title size="large" class="mt-1">{{ title }}</ion-title>
         </ion-toolbar>
       </ion-header>
       <slot></slot>
