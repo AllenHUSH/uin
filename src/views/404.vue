@@ -5,9 +5,8 @@
 </template>
 
 <script>
-import IonRouterLink from '@ionic/vue';
 import PageWithTitle from '@/components/PageWithTitle.vue';
 export default {
-  components: { IonRouterLink, PageWithTitle },
+  components: { PageWithTitle },
 };
 </script>
