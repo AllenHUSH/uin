@@ -2,10 +2,10 @@
   <ion-page>
     <ion-content color="primary" :fullscreen="true">
       <ion-row class="main-row">
-        <ion-col size="12" size-md="6">
+        <ion-col size="12" size-md="4">
            <img src="@/assets/icon.png" class="max-w-50 mx-auto"/>
            </ion-col>
-        <ion-col size="12" size-md="6">
+        <ion-col size="12" size-md="8">
           <ion-card class="max-w-screen-sm sm:mx-auto">
             <ion-card-header>
               <ion-card-subtitle>安全的互联网账号</ion-card-subtitle>
@@ -77,6 +77,7 @@ export default {
 
 <style scoped>
 .main-row{
+  justify-content: center;
   align-items: center;
   min-height: 70%;
 }
