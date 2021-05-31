@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 import Tabs from '@/Layout/Tabs.vue';
-// import FullScreen from '@/Layout/FullScreen.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -27,6 +26,16 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/Me.vue'),
       },
     ],
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import('@/views/Login.vue'),
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: '404',
+    component: () => import('@/views/404.vue'),
   },
 ];
 

@@ -5,42 +5,34 @@
         个人信息
       </ion-list-header>
       <ion-item>
-        <ion-label>
-          <ion-icon :icon="cogOutline" />
-          Pokémon Yellow
-        </ion-label>
+        More...
       </ion-item>
       <ion-list-header>
         通用设置
       </ion-list-header>
       <ion-item>
-        <ion-label>
-          <ion-icon :icon="cogOutline" />
-          多语言
-        </ion-label>
+        <ion-icon color="primary" slot="start" :icon="cogOutline" />
+        <ion-label>多语言</ion-label>
       </ion-item>
-      
+      <ion-item>
+        <ion-icon color="warning" slot="start" :icon="contrastSharp" />
+        <ion-label>主题</ion-label>
+      </ion-item>
     </ion-list>
   </PageWithTitle>
 </template>
 
 <script lang="ts">
-import { IonList, IonListHeader, IonItem, IonLabel, IonIcon } from '@ionic/vue';
-import { cogOutline } from 'ionicons/icons';
+import { cogOutline,contrastSharp} from 'ionicons/icons';
 import PageWithTitle from '@/components/PageWithTitle.vue';
 
 export default {
   name: 'Me',
   components: {
-    IonList,
-    IonListHeader,
-    IonItem,
-    IonLabel,
-    IonIcon,
     PageWithTitle,
   },
   setup() {
-    return { cogOutline };
+    return { cogOutline,contrastSharp };
   },
 };
 </script>

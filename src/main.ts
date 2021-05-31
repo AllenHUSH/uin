@@ -3,6 +3,7 @@ import App from './App.vue';
 import router from './router';
 
 import { IonicVue } from '@ionic/vue';
+import ion from '@/plugins/ion'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/vue/css/core.css';
@@ -27,6 +28,7 @@ import dao from './api/dao';
 
 const app = createApp(App)
   .use(IonicVue)
+  .use(ion)
   .use(router);
 
 app.config.globalProperties.$dao = dao;
