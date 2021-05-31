@@ -1,28 +1,46 @@
 <template>
-  <ion-page>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Me</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Me</ion-title>
-        </ion-toolbar>
-      </ion-header>
+  <PageWithTitle title="我">
+    <ion-list>
+      <ion-list-header>
+        个人信息
+      </ion-list-header>
+      <ion-item>
+        <ion-label>
+          <ion-icon :icon="cogOutline" />
+          Pokémon Yellow
+        </ion-label>
+      </ion-item>
+      <ion-list-header>
+        通用设置
+      </ion-list-header>
+      <ion-item>
+        <ion-label>
+          <ion-icon :icon="cogOutline" />
+          多语言
+        </ion-label>
+      </ion-item>
       
-      <ExploreContainer name="Tab 3 page" />
-    </ion-content>
-  </ion-page>
+    </ion-list>
+  </PageWithTitle>
 </template>
 
 <script lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
-import ExploreContainer from '@/components/ExploreContainer.vue';
+import { IonList, IonListHeader, IonItem, IonLabel, IonIcon } from '@ionic/vue';
+import { cogOutline } from 'ionicons/icons';
+import PageWithTitle from '@/components/PageWithTitle.vue';
 
-export default  {
-  name: 'Tab3',
-  components: { ExploreContainer, IonHeader, IonToolbar, IonTitle, IonContent, IonPage }
-}
+export default {
+  name: 'Me',
+  components: {
+    IonList,
+    IonListHeader,
+    IonItem,
+    IonLabel,
+    IonIcon,
+    PageWithTitle,
+  },
+  setup() {
+    return { cogOutline };
+  },
+};
 </script>
