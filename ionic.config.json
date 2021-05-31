@@ -1,0 +1,8 @@
+{
+  "name": "UIN",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue",
+  "id": "e5fbf90a"
+}
