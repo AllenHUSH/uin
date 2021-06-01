@@ -9,7 +9,7 @@
 
         <ion-tab-button tab="tab2" href="/me">
           <ion-icon :icon="person" />
-          <ion-label>Me</ion-label>
+          <ion-label>我</ion-label>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>

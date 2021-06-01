@@ -4,12 +4,19 @@
   "private": true,
   "description": "An Ionic project",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "ionic serve --port=3000",
+    "build": "ionic build",
+    "vue:serve": "vue-cli-service serve",
+    "vue:build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "electron:build": "vue-cli-service electron:build",
+    "electron:serve": "vue-cli-service electron:serve",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps"
   },
+  "main": "background.js",
   "dependencies": {
     "@capacitor/app": "1.0.0",
     "@capacitor/core": "3.0.0",
@@ -25,6 +32,7 @@
   },
   "devDependencies": {
     "@capacitor/cli": "3.0.0",
+    "@types/electron-devtools-installer": "^2.2.0",
     "@types/jest": "^24.0.19",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
@@ -39,9 +47,13 @@
     "@vue/compiler-sfc": "^3.0.0-0",
     "@vue/eslint-config-typescript": "^5.0.2",
     "@vue/test-utils": "^2.0.0-0",
+    "electron": "^12.0.0",
+    "electron-devtools-installer": "^3.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0-0",
+    "spectron": "14.0.0",
     "typescript": "~3.9.3",
+    "vue-cli-plugin-electron-builder": "~2.0.0",
     "vue-cli-plugin-windicss": "~0.3.0",
     "vue-jest": "^5.0.0-0"
   }
